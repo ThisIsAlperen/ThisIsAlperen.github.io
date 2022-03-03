@@ -713,6 +713,7 @@ section {
     padding: 0 10px;
     align-items: center;
     height: 400px;
+    position: relative;
 }
 
 #sendMessage input {
@@ -736,6 +737,7 @@ section {
     border: none;
     background-color: inherit;
     border-bottom: 1px solid #888;
+   
 }
 
 #sendMessage textarea:focus {
@@ -769,6 +771,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 6rem;
 }
 
 #footerLinks li {
