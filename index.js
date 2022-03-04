@@ -63,14 +63,15 @@ homePage.children[2].onclick = function (e) {
 }
 // scroll to the page when navbar link clicked
 ScrollLinks.onclick = function (e) {
+    e.preventDefault()
     var x = e.target.getAttribute('href')
     var y = document.getElementById(x)
-
+    
     $('html,main').animate({ //animate element that has scroll
         scrollTop: y.offsetTop //for scrolling
 
     }, 100);
-    e.preventDefault()
+    
 }
 // remove the navbar class when resize
 window.addEventListener('resize', function () {
@@ -92,13 +93,12 @@ window.addEventListener('resize', function () {
 function Fade() {
     var x = this.window.innerHeight + this.window.pageYOffset + -200;
     document.getElementById('scroll').children.forEach(function (child) {
-        console.log(x)
-        console.log(child.offsetTop)
+       
         if (child.offsetTop < x) {
             child.children.forEach(function (e) {
                 e.style.transition = '.6s'
                 e.style.opacity = '1'
-                console.log(this.window.getComputedStyle(e).paddingTop)
+              
                 //Number(this.window.getComputedStyle(e).padding)
                 e.style.paddingTop = '0px'
             })
@@ -392,7 +392,7 @@ function homeArrow2() {
 
 // 
 
-document.getElementById('navButton').onclick = function (e) {
+document.getElementById('navButton').onclick = function close(e) {
     var x = document.getElementsByTagName('nav')[0]
 
 
@@ -403,7 +403,7 @@ document.getElementById('navButton').onclick = function (e) {
         var y = e.target.children[0]
 
     }
-    console.log(y)
+    
     if (x.classList[2] == 'open') {
         y.classList.remove('fa-xmark')
         y.classList.add('fa-bars')
@@ -429,7 +429,6 @@ function createImg(x) {
     createI()
 }
 function createI() {
-
     for (i = 0; i < carousel.children.length; i++) {
         icon = document.createElement('i');
         icon.setAttribute('class', 'fa-solid fa-circle off')
