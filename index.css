@@ -397,9 +397,14 @@ section {
     display: inline-block;
     padding: 10px 0;
 }
-
-#aboutDetails button {
-    width: 170px;
+#downloadButtons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 50px;
+}
+#downloadButtons button {
+   margin-right: 0;
 }
 
 /* <<<<<<<<<<<<<<<<---PORTFOLIOPAGE--->>>>>>>>>>>> */
