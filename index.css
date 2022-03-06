@@ -374,7 +374,6 @@ section {
 }
 #aboutDetails img {
     width: 100%;
-   
     margin-bottom: 20px;
 }
 
@@ -405,6 +404,8 @@ section {
 }
 #downloadButtons button {
    margin-right: 0;
+  
+   padding: 0;
 }
 
 /* <<<<<<<<<<<<<<<<---PORTFOLIOPAGE--->>>>>>>>>>>> */
