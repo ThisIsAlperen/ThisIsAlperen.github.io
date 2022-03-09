@@ -160,6 +160,7 @@ function changeJob() {
 
     y = y.split('')
     x = x.split('')
+   
 
 
     setTimeout(function () { clearJob(x); }, 750)
