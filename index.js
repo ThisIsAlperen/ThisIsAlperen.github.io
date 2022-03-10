@@ -9,6 +9,10 @@ const ScrollLinks = document.getElementById('scrollLinks')
 const Main = document.querySelector('main')
 const homeDownArrow = document.getElementById('homeDownArrow')
 
+const frame = document.getElementById('frame')
+const jobDetailLink = document.getElementById('jobDetailLink')
+
+
 // this is for the changing job with js
 const job = document.getElementById('homeJob').children[0]
 
@@ -338,7 +342,9 @@ portfolioLinks.onclick = function (e) {
 }
 jobDetail.children[0].onclick = function (e) {
     jobDetail.style.opacity = '0';
-
+    frame.classList.add('hide')
+    frame.style.opacity = '0'
+    frame.style.height = '0px'
     setTimeout(function () {
         show(portfolioPage.children[1])
         show(portfolioPage.children[2])
@@ -456,3 +462,13 @@ function carouselWidth() {
 
     document.getElementById('jobDetailPicture').style.height = `${h}px`
 }
+function gamePlay() {
+    
+    frame.classList.remove('hide')
+    var h = frame.offsetWidth*9/16
+    setTimeout(function () {
+        frame.style.opacity = '1'
+        frame.style.height = h+'px'
+    }, 100)
+}
+   
