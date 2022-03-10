@@ -1,0 +1,465 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 24px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: inherit;
+}
+
+#bgImg {
+    opacity: .9;
+    width: 100%;
+    height: 100%;
+    background-image: url('background3.png');
+    background-size: cover;
+    background-position: 0px -160px;
+    z-index: -20;
+}
+
+#bushBox {
+    position: absolute;
+    height: 200px;
+    width: 110%;
+    top: 350px;
+    overflow: hidden;
+}
+
+#bush {
+    left: -100px;
+    width: 100px;
+    z-index: 0;
+    height: 100px;
+    transition: 15s ease-out;
+    position: absolute;
+
+}
+
+
+
+/* =====================Main================== */
+
+/* <<<<<<<<<<<<<<<<---NEW GAME--->>>>>>>>>>>> */
+#newGameSign {
+    position: absolute;
+    width: 300px;
+    top: 175px;
+    right: 80px;
+    z-index: 10;
+}
+
+#newGameButton {
+    position: absolute;
+    width: 140px;
+    height: 120px;
+    right: 134px;
+    top: 270px;
+    background-color: aqua;
+    opacity: 0;
+    z-index: 20;
+}
+
+.hide {
+    display: none;
+}
+
+/* <<<<<<<<<<<<<<<<---CATEGORIES--->>>>>>>>>>>> */
+#categories {
+    position: absolute;
+    width: 390px;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    z-index: 10;
+    transition: .5s;
+    transition-delay: .3s;
+}
+
+#categoriesSign {
+    width: 360px;
+
+}
+
+.categoryButton {
+    position: absolute;
+    background-color: aqua;
+    width: 200px;
+    height: 70px;
+    opacity: 0;
+    z-index: 20;
+
+}
+
+#historyButton {
+    top: 45px;
+    right: 100px;
+   
+    transform: rotateZ(-2deg);
+    width: 265px;
+}
+
+#artButton {
+    top: 140px;
+    transform: rotate(-2deg);
+    right: 115px;
+    width: 220px;
+}
+
+#geographyButton {
+    top: 235px;
+    right: 65px;
+    height: 75px;
+    width: 290px;
+    transform: rotateZ(-3deg);
+}
+
+#sportButton {
+    top: 360px;
+    right: 115px;
+    transform: rotateZ(-1deg);
+    width: 220px;
+}
+
+#scienceButton {
+    top: 462px;
+    transform: rotateZ(-2deg);
+    right: 75px;
+    width: 205px;
+    height: 55px;
+}
+
+/* <<<<<<<<<<<<<<<<---GALLOWS--->>>>>>>>>>>> */
+#gallows {
+    position: absolute;
+    width: 500px;
+    left: -550px;
+    top: 0px;
+    transition: .5s;
+    transition-delay: .3s;
+}
+
+#gallowsSub {
+    position: relative;
+    width: 100%;
+}
+
+#gallowsWood {
+    position: absolute;
+    width: 400px;
+    left: 200px;
+    z-index: 5;
+}
+
+#head {
+    position: absolute;
+    width: 120px;
+    top: 160px;
+    left: 390px;
+    z-index: 6;
+}
+
+#body {
+    position: absolute;
+    width: 230px;
+    top: 142px;
+    left: 325px;
+    z-index: 2;
+}
+
+#arms {
+    position: absolute;
+    width: 230px;
+    top: 142px;
+    left: 325px;
+    z-index: 3;
+}
+
+#wholeBody {
+    position: absolute;
+    width: 260px;
+    top: 120px;
+    left: 325px;
+    z-index: 4;
+}
+
+/* <<<<<<<<<<<<<<<<---MENU SIGN--->>>>>>>>>>>> */
+
+#menu {
+    position: absolute;
+    width: 400px;
+    right: -400px;
+    top: 400px;
+    transition: .5s;
+    transition-delay: .3s;
+    font-weight: bolder;
+   
+    /* font-family: 'Akaya Telivigala', cursive; */
+    font-family: 'Architects Daughter', cursive;
+    /* font-family: 'Varela Round', sans-serif; */
+}
+
+#menuSign {
+    width: 300px;
+}
+#showAnswer{
+    position: absolute;
+    width: 170px;
+    height: 50px;
+    right: 184px;
+    font-weight: bolder;
+    top: 70px;
+    background-color: transparent;
+    border: none;
+    text-shadow: 1px 1px 1px  black;
+}
+#return{
+    position: absolute;
+    width: 170px;
+    height: 50px;
+    right: 184px;
+    font-weight: bolder;
+    top: 130px;
+    background-color: transparent;
+    border: none;
+    text-shadow: 1px 1px 1px  black;
+}
+
+/* <<<<<<<<<<<<<<<<---GAME AREA--->>>>>>>>>>>> */
+#game {
+    position: absolute;
+    left: 540px;
+    top: 50px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 36px;
+
+}
+
+#gameSub {
+    position: relative;
+    width: 630px;
+    height: 300px;
+    opacity: 0;
+    transition: .5s;
+}
+
+.gameBG {
+    position: absolute;
+    background-color: rgb(175, 137, 54);
+    opacity: .7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    border-radius: 20px;
+    border: 10px saddlebrown solid;
+}
+
+#question {
+    position: absolute;
+    text-align: center;
+    opacity: 1;
+    z-index: 10;
+    top: 10px;
+    padding: 0 20px ;
+}
+
+#answer {
+    position: absolute;
+    opacity: 1;
+    z-index: 10;
+    top: 210px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+/* <<<<<<<<<<<<<<<<---KEYBOARD--->>>>>>>>>>>> */
+#keyboard {
+    position: absolute;    
+    left: 540px;
+    top: 440px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 36px;
+}
+
+#keyboardSub {
+    position: relative;
+    width: 630px;
+    height: 200px;
+    opacity: 0;
+    transition: .5s;
+}
+
+#keys {
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    transform: translate(-50%);
+    left: 50%;
+    top: 10px;
+    color: black;
+    z-index: 10;
+    margin-top: 5px;
+    
+}
+.disabled{
+    opacity: .5!important;
+}
+.disabled:hover{
+    background-color: rgba(255, 129, 71, 0.377)!important;
+    border: rgb(90, 49, 25) 2px solid!important;
+    cursor:context-menu !important;
+   
+}
+/* key class also used for the letters of the *word* */
+.key { 
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 50px;
+    text-align: center;
+    background-color: rgba(255, 129, 71, 0.377);
+    border: rgb(90, 49, 25) 2px solid;
+    line-height: 50px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    transition: .3s;
+}
+#keys .key:hover {
+    cursor: pointer;
+    background-color: rgb(207, 117, 42);
+    border: rgb(70, 37, 19) 2px solid;
+}
+/* <<<<<<<<<<<<<<<<---LIVES--->>>>>>>>>>>> */
+#score{
+    position: absolute;
+    left: 1500px;
+    top: 50px;
+    transition: .5s;
+    transition-delay: .3s;
+}
+
+#scoreSub{
+    width: 150px;
+    height: 150px;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px black;
+    transition: .5s;
+}
+#scoreTitle{
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    left: 40px;
+}
+#lives{
+    position: absolute;
+    position: absolute;
+    z-index: 10;
+    top: 80px;
+    left: 65px;
+}
+/* <<<<<<<<<<<<<<<<---RESULT--->>>>>>>>>>>> */
+#result {
+    position: absolute;
+    top: 110px;
+    transform: translate(-50%, 0);
+    left: 50%;
+}
+#resultSub{
+    position: relative;
+    width: 500px;
+    height: 200px;
+    font-family: 'Architects Daughter', cursive;
+    text-shadow: 2px 2px 2px black;
+    opacity: 0;
+    transition: 2s;
+}
+
+.finalResult{
+    position: absolute;
+    z-index: 10;
+    font-size: 60px;
+    transform: translate(-50%, 0);
+    left: 50%;
+    top: 10px;
+    /* font-family: 'Akaya Telivigala', cursive; */
+    opacity: 0;
+    /* font-family: 'Varela Round', sans-serif; */
+    transition: 2s;
+}
+
+#ok{
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 10px;
+    width: 100px;
+    font-size: 30px;
+    z-index: 10;
+    opacity: 1;
+}
+#correct{
+    width: 200%;
+    position: absolute;
+    text-align: center;
+    top: 75px;
+    transform: translate((-50%,-50%));
+    left:-50%;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px black;
+    opacity: 0;
+    transition: 2s;
+}
+/* <<<<<<<<<<<<<<<<---FOOTER--->>>>>>>>>>>> */
+footer{
+    position: absolute;
+    top: 673px;
+    margin-left: auto;
+    width: 85%;
+    text-align: center;
+    height: 40px;
+}
+footer ul{
+    
+    list-style: none;
+    width: 100%;
+}
+footer li{
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 10px;
+   
+}
+footer a{
+    border: 1px solid beige;
+    padding: 3px 6px;
+    border-radius: 10px;
+    color: beige;
+    transition: .3s;
+}
+footer a:hover{
+    border-color: #0d6efd!important;
+    
+}
