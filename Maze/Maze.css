@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 24px;
+}
+.row{
+    margin: 0;
+    padding: 0;
+    /* --bs-gutter-x:0 */
+}
+.col{
+    padding: 0;
+}
+#gameArea{
+    border: 3px solid black;
+    width: 900px;
+    margin: auto;
+    height: 600px;
+    margin-top: 40px;
+}
+.path{
+    background-color: rgb(250, 250, 250) ;
+    
+}
+.left{
+    border-left:1px solid white!important;
+    
+}
+.right{
+    border-right:1px solid white!important;
+}
+.top{
+
+    border-top:1px solid white!important;
+    
+}
+.bottom{
+    border-bottom: 1px solid white!important;
+}
+.container{
+    position: relative;
+}
+
+
+.col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    
+    width: 60%;
+    height: 60%;
+    background-color: rgb(253, 62, 4);
+    border-radius: 50%;
+    text-align: center;
+    margin: auto;
+
+}
+#runArea p{
+ 
+    margin: 0;
+}
+#runArea input{
+    width: 40px;
+}
+#runArea button{
+    border-radius: 8px;
+    margin-left: 5px;
+}
+button:hover{
+    background-color: silver;
+}
+
+#runArea{
+    display: flex;
+    width: 100%;
+    margin: 20px auto;
+    justify-content: center;
+    
+}
