@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="XOX.css">
+    
+    <title>X O X</title>
+
+
+    
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h1 class="title">
+            Tic Tac Toe
+        </h1>
+        <div id="main">
+
+            <ul id="menu">
+                <li id="newGame">Easy</li>
+                <li id="hard">Hard</li>
+                <li id="twoPlayer">2 - Player</li>
+            </ul>
+        </div>
+        <div id="game" class="hide">
+            <div id="player1 " class="scoreboard">
+                Player X
+                <p>0</p>
+            </div>
+            <div id="player2" class=" scoreboard">
+                Player O
+                <p>0</p>
+            </div>
+
+
+            <div id="game-container">
+                <div class="item item1"></div>
+                <div class="item item2"></div>
+                <div class="item item3"></div>
+                <div class="item item4"></div>
+                <div class="item item5"></div>
+                <div class="item item6"></div>
+                <div class="item item7"></div>
+                <div class="item item8"></div>
+                <div class="item item9"></div>
+                <div id="finish">
+                    <div class="line col1 hide"></div>
+                    <div class="line col2 hide"></div>
+                    <div class="line col3 hide"></div>
+                    <div class="line row1 hide"></div>
+                    <div class="line row2 hide"></div>
+                    <div class="line row3 hide"></div>
+                    <div class="line diag1 hide"></div>
+                    <div class="line diag2 hide"></div>
+                </div>
+                <div id="turnX" class="turn">X</div>
+                <div id="turnO" class="turn hide">O</div>
+
+            </div>
+
+            <button id="Restart" class="float-left"> Restart</button>
+            <button id="clear"> Clear</button>
+            <button id="mainMenu" class="float-right"> Main Menu</button>
+        </div>
+    </div>
+    <script src="XOX.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
