@@ -25,7 +25,7 @@ body {
 
 img {
 
-    box-shadow: 3px 3px 3px rgb(136, 136, 136,0.4);
+    box-shadow: 3px 3px 3px rgb(136, 136, 136, 0.4);
 
 }
 
@@ -130,7 +130,7 @@ nav {
     left: 0;
     float: left;
     height: 100vh;
-    background-color: #222222;
+    background-color: #272727;
     border-right: black 10px solid;
     position: fixed;
     transition: 1s;
@@ -140,14 +140,13 @@ nav {
 #profilePicture {
     width: 70%;
     margin: 20px auto;
-    background-color: #eee;
+
 }
 
 #profilePicture img {
     object-fit: cover;
     width: 100%;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+
     box-shadow: none;
 }
 
@@ -162,7 +161,8 @@ nav {
 nav li {
     text-align: center;
     transition: 1s;
-    padding: 20px 0px;
+    padding: 30px 0px 10px;
+    font-size: 4.5rem;
     border-bottom: 2px solid #888;
     width: 70%;
     margin: 10px auto;
@@ -179,7 +179,6 @@ nav li {
 }
 
 .hover {
-
     color: #eee;
 }
 
@@ -256,11 +255,11 @@ section {
     left: 0;
     top: 0;
     position: absolute;
-    background-image: url(night.jpg);
+    background-image: url(/img/snow.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: .8!important;
+    opacity: .8 !important;
     width: 100%;
     height: 100%;
 }
@@ -290,6 +289,7 @@ section {
     display: flex;
     overflow: hidden;
     font-size: 5rem;
+    font-weight: 700;
 
 }
 
@@ -369,9 +369,11 @@ section {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-#aboutImg{
+
+#aboutImg {
     padding: 0 10px;
 }
+
 #aboutDetails img {
     width: 100%;
     margin-bottom: 20px;
@@ -396,15 +398,17 @@ section {
     display: inline-block;
     padding: 10px 0;
 }
-#downloadButtons{
+
+#downloadButtons {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-right: 50px;
 }
+
 #downloadButtons button {
-   margin-right: 0;
-   padding: 0;
+    margin-right: 0;
+    padding: 0;
 }
 
 /* <<<<<<<<<<<<<<<<---PORTFOLIOPAGE--->>>>>>>>>>>> */
@@ -538,16 +542,19 @@ section {
 #jobDetailText {
     padding: 0 10px;
 }
-#jobDetailLink{
+
+#jobDetailLink {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#jobDetailLink a:hover{
+
+#jobDetailLink a:hover {
     background-color: #222222;
     color: #fff;
 }
-#jobDetailLink a{
+
+#jobDetailLink a {
     background-color: #fff;
     color: #222222;
     padding: 5px 10px;
@@ -688,11 +695,14 @@ section {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 10px;
+}
 
+#contactDetails h3 {
+    text-align: center;
 }
 
 #contactInfo {
-   
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -700,20 +710,33 @@ section {
 }
 
 #contactInfo li {
-    width: 50%;
+
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
-#contactInfo i{
-    background-color: peru;
+
+#contactInfo i {
+    background: rgb(109, 109, 109);
+    background: linear-gradient(180deg, rgba(109, 109, 109, 1) 0%, rgb(165, 164, 164) 100%);
     font-size: 40px;
-    width: 70px;
-    height: 70px;
-    line-height: 60px;
-    border-radius: 35px;
-    border: 4px solid peru;
+    width: 80px;
+    height: 80px;
+    line-height: 77px;
+    border-radius: 40px;
     color: #eee;
     margin-bottom: 10px;
+    transition: .5s;
+}
+
+#contactInfo i:hover {
+    transform: rotateZ(360deg);
+}
+#contactInfo p{
+    transition: .5s;
+}
+#contactInfo p:hover {
+    font-weight: bold;
+    font-size: larger;
 }
 #contactLinks {
     padding: 0;

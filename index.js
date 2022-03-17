@@ -3,7 +3,7 @@ const aboutPage = document.getElementById('aboutPage')
 const portfolioPage = document.getElementById('portfolioPage')
 const contactPage = document.getElementById('contactPage')
 const skills = document.getElementById('skillsPage')
-
+const navButton = document.getElementById('navButton').children[0]
 const Scroll = document.getElementById('scroll')
 const ScrollLinks = document.getElementById('scrollLinks')
 const Main = document.querySelector('main')
@@ -43,10 +43,13 @@ function hide(x) {
 }
 function show(x) {
     x.classList.remove('hide')
-} 
+}
 homePage.children.forEach(function (child) {
-    child.style.opacity = '1'
-    child.style.paddingTop = '0'
+    setTimeout(function () {
+        child.style.transition = '.5s'
+        child.style.opacity = '1'
+        child.style.paddingTop = '0'
+    },500);
 })
 carousel.innerHTML = '';
 
@@ -70,12 +73,17 @@ ScrollLinks.onclick = function (e) {
     e.preventDefault()
     var x = e.target.getAttribute('href')
     var y = document.getElementById(x)
-    
+
+    if(window.innerWidth < 992){
+        document.getElementsByTagName('nav')[0].classList.remove('open')
+        navButton.classList.add('fa-bars')
+        navButton.classList.remove('fa-xmark')
+    }
     $('html,main').animate({ //animate element that has scroll
         scrollTop: y.offsetTop //for scrolling
 
     }, 100);
-    
+
 }
 // remove the navbar class when resize
 window.addEventListener('resize', function () {
@@ -97,12 +105,12 @@ window.addEventListener('resize', function () {
 function Fade() {
     var x = this.window.innerHeight + this.window.pageYOffset + -200;
     document.getElementById('scroll').children.forEach(function (child) {
-       
+
         if (child.offsetTop < x) {
             child.children.forEach(function (e) {
                 e.style.transition = '.6s'
                 e.style.opacity = '1'
-              
+
                 //Number(this.window.getComputedStyle(e).padding)
                 e.style.paddingTop = '0px'
             })
@@ -164,7 +172,7 @@ function changeJob() {
 
     y = y.split('')
     x = x.split('')
-   
+
 
 
     setTimeout(function () { clearJob(x); }, 750)
@@ -304,7 +312,7 @@ portfolioLinks.onclick = function (e) {
             child.classList.add('hide')
         }
     });
-    document.getElementById('jobDetailLink').children.forEach(function(child){
+    document.getElementById('jobDetailLink').children.forEach(function (child) {
         if (child.getAttribute('name') == x) {
             child.classList.remove('hide')
         } else {
@@ -325,7 +333,7 @@ portfolioLinks.onclick = function (e) {
     if (x !== null) {//to make sure that user clicked to a picture not any point (will be changed)
         portfolioPage.children[1].style.opacity = '0';
         portfolioPage.children[2].style.opacity = '0';
-        
+
         setTimeout(function () {
             hide(portfolioPage.children[1])
             hide(portfolioPage.children[2])
@@ -410,7 +418,7 @@ document.getElementById('navButton').onclick = function close(e) {
         var y = e.target.children[0]
 
     }
-    
+
     if (x.classList[2] == 'open') {
         y.classList.remove('fa-xmark')
         y.classList.add('fa-bars')
@@ -463,12 +471,12 @@ function carouselWidth() {
     document.getElementById('jobDetailPicture').style.height = `${h}px`
 }
 function gamePlay() {
-    
+
     frame.classList.remove('hide')
-    var h = frame.offsetWidth*9/16
+    var h = frame.offsetWidth * 9 / 16
     setTimeout(function () {
         frame.style.opacity = '1'
-        frame.style.height = h+'px'
+        frame.style.height = h + 'px'
     }, 100)
 }
-   
+
