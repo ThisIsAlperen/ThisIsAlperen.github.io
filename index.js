@@ -8,7 +8,7 @@ const Scroll = document.getElementById('scroll')
 const ScrollLinks = document.getElementById('scrollLinks')
 const Main = document.querySelector('main')
 const homeDownArrow = document.getElementById('homeDownArrow')
-
+const skillsDetails = document.getElementById('skillsDetails')
 const frame = document.getElementById('frame')
 const jobDetailLink = document.getElementById('jobDetailLink')
 
@@ -480,3 +480,12 @@ function gamePlay() {
     }, 100)
 }
 
+
+
+skillsDetails.children.forEach(child => {
+    console.log(child.children)
+    child.children.forEach(c =>{
+        var percent = c.children[1].innerText;
+        c.children[2].children[0].style.width = percent
+    })
+})
