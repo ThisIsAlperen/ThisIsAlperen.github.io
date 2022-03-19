@@ -489,3 +489,26 @@ skillsDetails.children.forEach(child => {
         c.children[2].children[0].style.width = percent
     })
 })
+
+var xhr = new XMLHttpRequest();
+
+xhr.onreadystatechange = function(){
+    if(xhr.status === 200 && xhr.readyState === 4){
+        console.log(xhr.responseText)
+    }
+}
+xhr.open('GET','aboutMe.txt',true)
+xhr.send()
+
+var json = new XMLHttpRequest();
+
+json.onreadystatechange = function(){
+    console.log(json.status)
+    console.log(json.readyState)
+
+    if (json.status === 200 && json.readyState === 4) {
+        console.log(xhr.responseText)
+    }
+}
+json.open('GET','Eng.json',true)
+json.send
