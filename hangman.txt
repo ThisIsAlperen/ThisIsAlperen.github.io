@@ -1,0 +1,6 @@
+This is my lastes game project. I tried to use the
+                                Object Oriented Programming for some parts. Main thing in this project is the design and
+                                appearence. Adobe Photoshop is highly used. Animation effects highlighted. The most of
+                                the functions run to show or hide an object. No extra algoritm. The question list held
+                                at minimum. Keyboard, question and the answer will be created after chosing a category.
+                                They will be deleted at the end of the round.

@@ -1,0 +1,6 @@
+This is my first game experience with JavaScript.
+                                It has different 'if' for every winnign situation. After every win or loose, saves the
+                                score to the Local Storage. There are two different function for game process; one and
+                                two (as players). In case of choosing one, the game choose avalible places by randomly
+                                or a few extras depends on the level. In case of choosing two, game will allow to click
+                                anytime.

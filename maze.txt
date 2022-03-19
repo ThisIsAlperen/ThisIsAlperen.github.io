@@ -1,0 +1,5 @@
+This is a project for logic and algoritm. I have no plan to
+                                make this as a design project or a game. Main goal was solving the problems by logic.
+                                This code starts from left top corner, find a path randomly, if there is a dead-end,
+                                turns back and goes to another route. until it reaches to the right bottom corner. After
+                                that creates detour paths buy finding every not-visited box.

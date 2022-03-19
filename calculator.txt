@@ -1,0 +1,8 @@
+Firts JavaScript code. Mainly Bootstrap used.
+                                Has flaws but I have no intension to fixed my first code. I should be able to look back.
+                                Features was the compelling part of the project. This codes has two parts; putting
+                                everything to the inbox, and the calculations. Every button or keyboard entry will be
+                                added to the inbox as a string, when equal or enter clicked, it will calcilate the value
+                                of inbox. in this part, it will keep it as string.It will get the symbols with an order
+                                and conrvert to the number just the after and before elements of the symbols. By doing
+                                this, process priority will be provided
