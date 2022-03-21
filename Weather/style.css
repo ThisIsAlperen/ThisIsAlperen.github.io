@@ -1,0 +1,26 @@
+#left {
+    text-align: center;
+    font-size: 24px;
+}
+#left p{
+    margin: 10px 0;
+}
+#right p{
+    font-size: 18px;
+}
+#wind{
+    text-align: center;
+}
+#wind h4{
+    margin-bottom: 0;
+}
+#wind hr{
+    width: 50%;
+    margin: auto;
+    height: 1px;
+}
+i{
+    font-size: 48px;
+    color: #7e7e7e;
+    margin: 10px;
+}
