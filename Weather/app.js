@@ -1,6 +1,9 @@
 const coordinates = new Coordinates();
 const weather = new Weather();
+var token = config.token;
+var key = config.key;
 
+var appid = token + key;   
 var city = 'istanbul';
 
 const search = document.getElementById('search');
@@ -9,12 +12,12 @@ search.addEventListener('keypress', (event) => {
     if (event.key == 'Enter') {
         let text = event.target.value;
         if (text != '') {
-            coordinates.getCoordinates(text).then(response => {
+            coordinates.getCoordinates(text,appid).then(response => {
                 city =response.coordinates[0].name ;
                 if (response.coordinates[0].name != '') {
                     var latitude = response.coordinates[0].lat
                     var longitude = response.coordinates[0].lon
-                    weather.getWeather(latitude, longitude).then(response => {
+                    weather.getWeather(latitude, longitude,appid).then(response => {
                         const ui = new UI(city);
                         console.log(ui)
                         ui.showWeather(response.weather)
