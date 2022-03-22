@@ -1,5 +1,7 @@
 const coordinates = new Coordinates();
 const weather = new Weather();
+
+require('config.js').config();
 var token = config.token;
 var key = config.key;
 
