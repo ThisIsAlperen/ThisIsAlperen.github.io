@@ -1,6 +1,7 @@
 class UI {
     constructor(city) {
         this.weatherContainer = document.getElementById('weatherContainer')
+        this.subMenu = document.getElementById('subMenu')
         this.city = city;
         this.weather = ''
     }
@@ -42,15 +43,25 @@ class UI {
     </div>
     `
     }
-
+    clear(){
+        this.weatherContainer.innerHTML = '';
+        this.subMenu.classList = ''
+        this.subMenu.innerText = ''
+    }
     showPicture(picture) {
         this.weatherContainer.querySelector('#picture').setAttribute('src', picture)
     }
     showWind(){
         this.weatherContainer.querySelector('#angle').setAttribute('style',`transform: rotate(${90 - this.weather.wind.deg}deg);`)
     }
-    City(city){
-        this.weatherContainer.querySelector('#city').innerHTML  = city;
+    showCity(city){
+        this.subMenu.innerHTML = city;
+        this.subMenu.classList.add('bg-secondary')
+
+    }
+    cityNotFound(city){
+        this.subMenu.innerHTML = city + ' not found'
+        this.subMenu.classList.add('bg-danger')
     }
 
 }

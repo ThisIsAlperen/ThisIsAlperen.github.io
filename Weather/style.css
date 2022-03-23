@@ -24,3 +24,6 @@ i{
     color: #7e7e7e;
     margin: 10px;
 }
+#subMenu:hover{
+    cursor: pointer;
+}
