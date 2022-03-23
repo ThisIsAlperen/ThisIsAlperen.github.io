@@ -1,9 +1,9 @@
 const coordinates = new Coordinates();
 const weather = new Weather();
 
-require('config.js').config();
-var token = config.token;
-var key = config.key;
+
+var token = '304e44883edf2df5';
+var key = 'c0b047223c35dedf';
 
 var appid = token + key;   
 var city = 'istanbul';
@@ -15,6 +15,7 @@ search.addEventListener('keypress', (event) => {
         let text = event.target.value;
         if (text != '') {
             coordinates.getCoordinates(text,appid).then(response => {
+                
                 city =response.coordinates[0].name ;
                 if (response.coordinates[0].name != '') {
                     var latitude = response.coordinates[0].lat
