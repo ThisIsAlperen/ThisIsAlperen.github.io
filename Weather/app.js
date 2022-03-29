@@ -63,12 +63,11 @@ subMenu.onclick = function () {
 
 coordinates.getCoordinates(city)
     .then(response => {
-        console.log(response.coordinates)
         var latitude = response.coordinates[0].lat
         var longitude = response.coordinates[0].lon
 
         weather.getWeather(latitude, longitude).then(response => {
-            console.log(response.weather)
+            
         })
     })
 

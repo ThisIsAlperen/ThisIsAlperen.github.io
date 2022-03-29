@@ -268,17 +268,17 @@ setInterval(function () {
 
         if (i == 0) {
             hide(job2.children[0].children[0])
-            job2.style.width = '145px'
+            job2.style.width = '172px'
             show(job2.children[0].children[1])
         }
         if (i == 1) {
             hide(job2.children[0].children[1])
-            job2.style.width = '107px'
+            job2.style.width = '132px'
             show(job2.children[0].children[2])
         }
         if (i == 2) {
             hide(job2.children[0].children[2])
-            job2.style.width = '155px'
+            job2.style.width = '182px'
             show(job2.children[0].children[0])
         }
 

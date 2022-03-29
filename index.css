@@ -295,7 +295,7 @@ section {
 
 #homeJob span {
 
-    flex: 0 0 45px;
+    flex: 0 0 60px;
     margin-right: 7px;
     overflow: hidden;
 
@@ -318,9 +318,9 @@ section {
 }
 
 #changeJob li {
-    flex: 0 0 135px;
+    flex: 0 0 183px;
     display: inline-block;
-    height: 30px;
+    height: 40px;
     position: absolute;
     left: 0;
 
